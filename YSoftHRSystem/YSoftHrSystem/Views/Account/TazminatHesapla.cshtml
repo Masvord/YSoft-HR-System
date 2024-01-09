@@ -1,0 +1,53 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "TazminatHesapla";
+}
+
+<head>
+    <link href="~/Content/TazminatHesapla.css" rel="stylesheet" />
+</head>
+
+@*<h2>Tazminat Hesapla</h2>
+
+    @using (Html.BeginForm("Hesapla", "Account", FormMethod.Post))
+    {
+        <div class="form-group">
+            <label for="employeeName">Çalışan Adı:</label>
+            <input type="text" name="employeeName" class="form-control" required />
+        </div>
+
+        <button type="submit" class="btn btn-primary">Hesapla</button>
+    }
+
+    @if (!string.IsNullOrEmpty(Model))
+    {
+        <div class="result">
+            <h4>Tazminat Hesap Sonucu:</h4>
+            <p>@Html.Raw(Model)</p>
+        </div>
+    }*@
+
+<h2>Tazminat Hesapla</h2>
+    @using (Html.BeginForm("Hesapla", "Account", FormMethod.Post))
+    {
+ 
+                <form id="tazminatForm">
+                    <div class="form-group">
+                        <label for="employeeName">Çalışan Adı:</label>
+                        <input type="text" name="employeeName" class="form-control" required />
+                    </div>
+
+                    <div class="form-group">
+                        <button type="submit" class="submit-button">Hesapla</button>
+                    </div>
+                </form>
+
+    }
+    @if (!string.IsNullOrEmpty(Model))
+    {
+        <div class="result">
+            <h4>Tazminat Hesap Sonucu:</h4>
+            <p>@Html.Raw(Model)</p>
+        </div>
+    }
