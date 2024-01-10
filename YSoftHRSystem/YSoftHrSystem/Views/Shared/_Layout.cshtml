@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"
     <link rel="stylesheet" href="~/Content/Layout.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-xxr7CjFVlhGtJtY4X3l74g8+4DHUv4w4tbsW6OK6ovVc4Eyy3cU6WCGJbvv2nv8CIWYO27NapXK+Ar1/5ZVMmw==" crossorigin="anonymous" />
     <title>@ViewBag.Title - My ASP.NET Application</title>
@@ -37,9 +37,9 @@
         </div>
     </nav>
 
-    <div class="container bodyFooter">
-        @RenderBody()
 
+    @RenderBody()
+    <div class="container bodyFooter" id="tazminatContainer">
 
         @* Footer Başlangıcı *@
         <div class="container">

@@ -5,8 +5,9 @@
 }
 
 <head>
-    <link href="~/Content/TazminatHesapla.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/TazminatHesapla.css" />
 </head>
+    
 
 @*<h2>Tazminat Hesapla</h2>
 
@@ -28,20 +29,21 @@
         </div>
     }*@
 
-<h2>Tazminat Hesapla</h2>
+<div class="tazminat container">
+    <h2>Tazminat Hesapla</h2>
     @using (Html.BeginForm("Hesapla", "Account", FormMethod.Post))
     {
- 
-                <form id="tazminatForm">
-                    <div class="form-group">
-                        <label for="employeeName">Çalışan Adı:</label>
-                        <input type="text" name="employeeName" class="form-control" required />
-                    </div>
 
-                    <div class="form-group">
-                        <button type="submit" class="submit-button">Hesapla</button>
-                    </div>
-                </form>
+        <form id="tazminatForm">
+            <div class="formGroupTazminat">
+                <label>Çalışan Adı</label>
+                <input type="text" name="employeeName" class="form-control" required />
+            </div>
+
+            <div class="formGroupResult">
+                <button type="submit" class="buttonTazminat">Hesapla</button>
+            </div>
+        </form>
 
     }
     @if (!string.IsNullOrEmpty(Model))
@@ -51,3 +53,5 @@
             <p>@Html.Raw(Model)</p>
         </div>
     }
+
+</div>

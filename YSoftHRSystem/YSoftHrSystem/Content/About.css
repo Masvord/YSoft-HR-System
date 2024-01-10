@@ -43,12 +43,15 @@ p {
         color: #ecf0f1;
     }
 
-@media (max-width: 600px) {
-    .about-container {
-        padding: 10px;
-    }
+    .achievements-list li {
+        list-style-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"><path d="M11.32 1.32a1 1 0 0 0-1.41 0L5 6.59 2.09 3.68a1 1 0 1 0-1.41 1.41l3 3a1 1 0 0 0 1.41 0L11 2.73a1 1 0 0 0 .32-.73z"/></svg>');
 
-    .about-content {
-        padding: 10px;
-    }
-}
+        @media (max-width: 600px) {
+            .about-container {
+                padding: 10px;
+            }
+
+            .about-content {
+                padding: 10px;
+            }
+        }

@@ -12,8 +12,11 @@
     background-color: #2c3e50;
     padding: 20px;
     border-radius: 10px;
-    margin-top: 20px; /* Header ile arasında biraz mesafe */
+    margin-top: 20px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-content {
