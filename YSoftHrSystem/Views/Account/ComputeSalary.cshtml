@@ -1,0 +1,34 @@
+﻿@model string
+
+@{
+    ViewBag.Title = "ComputeSalary";
+}
+
+<link rel="stylesheet" href="~/Content/ComputeSalary.css" />
+
+<div class="salary container">
+    <h2>Maaş Hesapla</h2>
+    @using (Html.BeginForm("ComputeSalary", "Account", FormMethod.Post))
+    {
+
+        <form id="salaryForm">
+            <div class="formGroupSalary">
+                <label>Çalışan Adı</label>
+                <input type="text" name="employeeName" class="form-control" required />
+            </div>
+
+            <div class="formGroupResult">
+                <button type="submit" class="btn btn-primary buttonSalary mt-2">Hesapla</button>
+            </div>
+        </form>
+
+    }
+    @if (!string.IsNullOrEmpty(Model))
+    {
+        <div class="result">
+            <h4>Maaş Hesap Sonucu:</h4>
+            <p>@Html.Raw(Model)</p>
+        </div>
+    }
+
+</div>
